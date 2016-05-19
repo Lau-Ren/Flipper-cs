@@ -27,3 +27,6 @@ What technologies are you going to play with
 
 ## Milestones
 What milestones and timeline do you want to commit to 
+
+##To Do in the Future
+Incude nouns? ie policewomen v policeman?

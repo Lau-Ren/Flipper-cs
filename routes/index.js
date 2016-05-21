@@ -15,11 +15,13 @@ router.get('/', function(req, res, next) {
 
 /* POST result. */
 router.post('/', function(req, res, next) {
-  var enteredTxt =req.body.text
-  // send entered text to be tagged
-  var arrOfTaggedWords = tag(enteredTxt)
+  var enteredText =req.body.text
 
-  res.render('index', {arrOfTaggedWords:arrOfTaggedWords});
+  // send entered text to be tagged and flipped
+  flippedText = flip(tag(enteredText))
+
+
+  res.render('index', {flippedText:flippedText, enteredText:enteredText});
 });
 
 

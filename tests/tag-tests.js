@@ -19,3 +19,7 @@ test('tag function tags each word to the string input', function(t){
 	t.equal(actualResult.length, expectedResult.length, 'tag func return array with correct length')
 	t.end()
 })
+
+
+
+

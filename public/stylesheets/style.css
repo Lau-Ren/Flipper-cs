@@ -23,8 +23,19 @@ body {
 #input-field\20{
 	color: rgb(34, 147, 32);
 }
+body > div > div:nth-child(2) > div > form > input[type="submit"]:nth-child(2){
 
+	color: rgb(250, 250, 250);
+}
 
+footer {
+	position: relative;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	
+	padding: 10px;
+}
 
 /* Larger than mobile */
 

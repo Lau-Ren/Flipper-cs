@@ -1,8 +1,53 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(34, 147, 32);
+  color: rgb(250, 250, 250);
+  text-align: center;
 }
 
-a {
-  color: #00B7FF;
+
+.triangle-logo {
+	min-width: 140px;
+	width: 50%;
+
+
 }
+
+.main-title{
+	margin: 0;
+	font-family: 'BEBAS';
+}
+
+
+#input-field\20{
+	color: rgb(34, 147, 32);
+}
+
+
+
+/* Larger than mobile */
+
+
+@media (min-width: 400px) {
+	.triangle-logo {
+	max-width: 200px;
+	
+
+}
+
+
+
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

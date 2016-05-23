@@ -1,6 +1,6 @@
 var test = require('tape');
 
-var neutral = require('../lib/neutral.js')
+var neutral = require('../lib/neutralise.js')
 
 // test the flip function
 test('', function(t){

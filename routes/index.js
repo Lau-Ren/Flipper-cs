@@ -6,6 +6,8 @@ var isArray =require('isarray')
 var flip = require('../lib/flip.js')
 var tag =require('../lib/tag.js')
 var neutralise =require('../lib/neutralise.js')
+var nouns =require('../db/nouns.json')
+var noun =require('../lib/noun.js')
 
 
 /* GET home page. */
@@ -16,23 +18,14 @@ router.get('/', function(req, res, next) {
 
 /* POST result. */
 router.post('/', function(req, res, next) {
-  var enteredText =req.body.text
+  var enteredText = (req.body.text).split(" ")
   
-  // neutralise text
-neutralise(enteredText)
-	.then(flip)
-	.then(function(obj) {
+  var flippedStr=	noun(nouns, enteredText)
 
-	  res.render('index', obj);
+	  res.render('index', {flippedStr:flippedStr});
 		
-	})
+	
 
-  // tag text
-  // var taggedArr = tag(enteredText)
-
-  // flip text
-
-  // flippedText = flip(tag(enteredText))
 
 
 });

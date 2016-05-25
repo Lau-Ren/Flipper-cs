@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
   
   var flippedStr=	noun(nouns, enteredText)
 
-	  res.render('index', {flippedStr:flippedStr});
+	res.render('index', {flippedStr:flippedStr});
 		
 	
 

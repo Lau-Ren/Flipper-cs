@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var isArray =require('isarray')
 
+var Promise = require('promise');
 /* required modules*/
 var flip = require('../lib/flip.js')
 var tag =require('../lib/tag.js')
@@ -12,13 +13,20 @@ var tweets=require('../lib/get-tweets.js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+ 	tweets('realdonaldtrump') //future use var, check other twitter users
+ 		.then(function(tweets){
+ 				
+ 		
+
+  		res.render('index', {tweets:tweets});
+		
+ 		})
+
 });
 
 
 /* POST result. */
 router.post('/', function(req, res, next) {
- 	tweets()
 
   var enteredText = (req.body.text).split(" ")
   

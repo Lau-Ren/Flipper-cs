@@ -18,21 +18,29 @@
 	</div>
 
 	<div class="row">
-	  <div class="twelve columns">
-			<p>	{{mascStr}}	</p>
-	  </div>
-	  
+		<div id="about">
+			<p>about</p>
+
+		</div>
+
 	</div>
+
 
 	<div class="row">
-	  <div class="twelve columns">
-			<p>{{neutStr}}</p>
-	  </div>
-	  
+		<div id="twitter-stream" >
+			{{#each tweets}}
+				<img class="tweet-profile-img" src="{{user.profile_image_url_https}}">
+				<p class="tweet-text">{{text}}</p>
+				<p class="tweet-date">{{created_at}}</p>
+
+
+			{{/each}}
+		</div>
+
+		
 	</div>
 
-
-
+	
 
 
 

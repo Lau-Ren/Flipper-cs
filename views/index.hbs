@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="row">
-	  <div class="twelve columns">
+	  <div id="flip-text">
 			<p>{{flippedStr}}</p>
 	  </div>
 	  
@@ -27,12 +27,15 @@
 
 
 	<div class="row">
-		<div id="twitter-stream" >
+		<div id="flip-twitter" >
 			{{#each tweets}}
-				<img class="tweet-profile-img" src="{{user.profile_image_url_https}}">
-				<p class="tweet-text">{{text}}</p>
-				<p class="tweet-date">{{created_at}}</p>
-
+				<div class="one column">
+					<img class="tweet-profile-img" src="{{user.profile_image_url_https}}">
+				</div>
+				<div class="eleven columns">
+					<p class="tweet-text">{{text}}</p>
+					<p class="tweet-date">{{created_at}}</p>
+				</div>
 
 			{{/each}}
 		</div>

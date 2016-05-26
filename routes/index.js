@@ -14,11 +14,21 @@ var tweets=require('../lib/get-tweets.js')
 /* GET home page. */
 router.get('/', function(req, res, next) {
  	tweets('realdonaldtrump') //future use var, check other twitter users
- 		.then(function(tweets){
- 				
- 		
+ 		.then(function(tweets){	
+ 			 	var newArr = tweets
+ 			 			// console.log(tweets.length);
 
-  		res.render('index', {tweets:tweets});
+ 			for(var i = 0; i < tweets.length; i++){
+ 				var newStr = noun(nouns, newArr[i].text.split(" "))
+ 				newArr[i].flipped_text = newStr
+ 				console.log(newArr[i], "this is " + i)
+ 			
+ 		  	
+ 			} 			
+ 		  
+
+ 		 // console.log(tweets, "looksie here");
+ 		 	res.render('index', {tweets:newArr});
 		
  		})
 

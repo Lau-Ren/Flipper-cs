@@ -5,10 +5,120 @@
 
     <title>Flipper</title>
 
+    <!-- external -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+
+    <!-- internal -->
+    <link rel="stylesheet" href="/fonts/font.css" type="text/css" charset="utf-8" >
+
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <h1>Flipper</h1>
+    <div class="container">
+      <nav class="navbar"> 
+        <div class="container">
+          <ul class="navbar-list">
+              <li class="navbar-item">
+                <a class="navbar-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="#flip-text">
+                  Flip Text
+                </a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="#flip-twitter">
+                  Flip Twitter
+                </a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="row">
+        <div class="twelve columns">
+          <h1 class="main-title">Flipper</h1>
+          <img class="triangle-logo" src="/images/triangleWhite.png">
+        </div>
+        
+      </div>
+
+      <div id="flip-text">
+        <form action="/" method="post">
+          <input id="input-field "type="text" name="text" placeholder="Enter text here..."></input>
+          <input type="submit" value="Submit"></input>  
+        </form>
+
+        <p>{{flippedStr}}</p>
+
+
+
+        <p>{{origStr}}</p>
+
+      </div>
+
+
+
+      <div id="flip-twitter" >
+
+        {{#each tweets}}
+
+
+          <img class="tweet-profile-img" src="{{user.profile_image_url_https}}">
+          <p class="tweet-text">{{text}}</p>
+
+          <p class="tweet-date">{{created_at}}</p>
+
+
+
+          <form>
+
+            <p class="tweet-text" rows="4" cols="30"> #FLIPPER@{{user.screen_name}}: {{flipped_text}} </p>
+
+            <input type="submit" value="Retweet"></input>
+          </form>
+
+
+        
+
+
+        {{/each}}
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      
+      <div id="about">
+        <p>about</p>
+
+      </div>
+
+      
+      <footer class="site-footer">
+        <p>
+          Created by <a href="https://github.com/Lau-Ren">Lauren</a> 
+        </p>
+
+      </footer>
+    </div>
+
+
+
+
+
+
 
   
     <p>
@@ -17,7 +127,7 @@
       <input type='submit' value='save' />
     </form>
     </p>
-    <p id='wall'></p>
+    
     <script src="js/app.js"></script>
   </body>
 </html>

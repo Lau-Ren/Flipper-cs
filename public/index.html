@@ -25,12 +25,12 @@
                 </a>
               </li>
               <li class="navbar-item">
-                <a class="navbar-link" href="#flip-text">
+                <a class="navbar-link" href="#text-flipper">
                   Flip Text
                 </a>
               </li>
               <li class="navbar-item">
-                <a class="navbar-link" href="#flip-twitter">
+                <a class="navbar-link" href="#twitter-flipper">
                   Flip Twitter
                 </a>
               </li>
@@ -48,48 +48,39 @@
       </div>
 
       <div id="text-flipper">
+        <h2 class="section-heading">Flip Text</h2>
 
         <form id="flip-text" action="/fliptext" method="post">
           <input id="text-to-flip" type="text" placeholder="Enter text here..."></input>
           <input type="submit" value="flip"></input>
         </form>
 
-        <div id="flipped-box">
-
-
-        </div>
+        <div id="flipped-box"></div>
 
 
       </div>
 
       <div id="twitter-flipper" >
+        <h2 class="section-heading">Flip Twitter</h2>
 
+        <form id="get-user" action="/gettweets" method="post">
+          <input id="twitter-handle" type="text" placeholder="Enter twitter user's name here"></input>
+          <input type="submit" value="get"></input>
+        </form>
 
-
-          <img class="tweet-profile-img" src="{{user.profile_image_url_https}}">
-          <p class="tweet-text">{{text}}</p>
-
-          <p class="tweet-date">{{created_at}}</p>
-
-
-
-          <form>
-
-            <p class="tweet-text" rows="4" cols="30"> #FLIPPER@{{user.screen_name}}: {{flipped_text}} </p>
-
-            <input type="submit" value="Retweet"></input>
-          </form>
+        <div class="tweet-box"></div>
 
       </div>
 
-
-
-
-
-
-
       <div id="about-flipper">
-        <p>about</p>
+        <h2 class="section-heading">ABOUT</h2>
+        <p id="about-content">Lorem ipum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
 
       </div>
 

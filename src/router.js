@@ -17,6 +17,12 @@ export default class Router {
         this.controller.flipText($('#text-to-flip').val())
       })
 
+      $('#get-user').on('submit', (event) => {
+        event.preventDefault()
+        this.controller.flipTweets($('#twitter-handle').val())
+      })
+
+
 
 
     })

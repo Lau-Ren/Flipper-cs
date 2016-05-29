@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar"> 
+      <nav class="navbar">
         <div class="container">
           <ul class="navbar-list">
               <li class="navbar-item">
@@ -44,28 +44,26 @@
           <h1 class="main-title">Flipper</h1>
           <img class="triangle-logo" src="/images/triangleWhite.png">
         </div>
-        
+
       </div>
 
-      <div id="flip-text">
-        <form action="/" method="post">
-          <input id="input-field "type="text" name="text" placeholder="Enter text here..."></input>
-          <input type="submit" value="Submit"></input>  
+      <div id="text-flipper">
+
+        <form id="flip-text" action="/fliptext" method="post">
+          <input id="text-to-flip" type="text" placeholder="Enter text here..."></input>
+          <input type="submit" value="flip"></input>
         </form>
 
-        <p>{{flippedStr}}</p>
+        <div id="flipped-box">
 
 
+        </div>
 
-        <p>{{origStr}}</p>
 
       </div>
 
+      <div id="twitter-flipper" >
 
-
-      <div id="flip-twitter" >
-
-        {{#each tweets}}
 
 
           <img class="tweet-profile-img" src="{{user.profile_image_url_https}}">
@@ -82,16 +80,6 @@
             <input type="submit" value="Retweet"></input>
           </form>
 
-
-        
-
-
-        {{/each}}
-
-
-
-
-
       </div>
 
 
@@ -99,16 +87,16 @@
 
 
 
-      
-      <div id="about">
+
+      <div id="about-flipper">
         <p>about</p>
 
       </div>
 
-      
+
       <footer class="site-footer">
         <p>
-          Created by <a href="https://github.com/Lau-Ren">Lauren</a> 
+          Created by <a href="https://github.com/Lau-Ren">Lauren</a>
         </p>
 
       </footer>
@@ -120,14 +108,8 @@
 
 
 
-  
-    <p>
-    <form id='graffiti' action='/dosomething'>
-      <input type='text' id='text' />
-      <input type='submit' value='save' />
-    </form>
-    </p>
-    
+
+
     <script src="js/app.js"></script>
   </body>
 </html>

@@ -5,7 +5,9 @@ export default class View {
     console.log('The data from the model is: ' + model.data)
   }
 
-  renderGraffiti (graffiti) {
-    $('#wall').append(graffiti)
+
+  renderFlippedText (flippedText) {
+    // console.log(flippedText, "this is flipped text in the view");
+    $('#flipped-box').append(flippedText)
   }
 }

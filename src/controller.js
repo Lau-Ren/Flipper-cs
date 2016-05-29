@@ -8,14 +8,11 @@ export default class Controller {
     this.view = new View()
   }
 
-  dance () {
-    console.log('Dancing in the controller! ~~~')
-
-    this.model.getData()
-    this.view.renderModel(this.model)
+  flipText (text) {
+    var origArr = text.split(" ")
+    var newStr = this.model.flipper(origArr) //flipper takes an array but returns a string
+    this.view.renderFlippedText(newStr)
   }
 
-  processGraffiti (graffiti) {
-    this.view.renderGraffiti(graffiti)
-  }
+
 }

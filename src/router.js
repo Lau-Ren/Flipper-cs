@@ -9,17 +9,16 @@ export default class Router {
 
   listen () {
     console.log('listening in the router')
-
     // this is where you put your event listeners
     // which call controller actions
     $(() => {
-      $(document).on('keydown', (event) => {
-        this.controller.dance()
-      })
-      $('#graffiti').on('submit', (event) => {
+      $('#flip-text').on('submit', (event) => {
         event.preventDefault()
-        this.controller.processGraffiti($('#text').val())
+        this.controller.flipText($('#text-to-flip').val())
       })
+
+
+
     })
   }
 }

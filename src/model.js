@@ -1,12 +1,5 @@
 import words from './words.json'
-import Promise from 'promise'
-import Twitter from 'twitter'
-
-// import  dotenv from 'dotenv'
-
-var  dotenv =require('dotenv').config();
-dotenv.load()
-
+import  $ from 'jquery'
 
 export default class Model {
 
@@ -24,32 +17,36 @@ export default class Model {
     return flippedArr.join(" ")
   }
 
-// async function to get tweets
-  getTweets (twitterHandle) {
+  flipTweets(tweets){
+    var arrTweets = tweets
 
-    var client = new Twitter({
-      consumer_key: process.env.TWITTER_CONSUMER_KEY,
-      consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-      access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-      access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
-    });
+    for(var i = 0; i < arrTweets.length; i++){
+      var newStr = this.flipper( arrTweets[i].text.split(" "))
+      arrTweets[i].flipped_text = newStr
+    }
 
-    return new Promise(function (resolve, reject) {
-      client.get('statuses/user_timeline', {count: 5, screen_name: twitterHandle}, function(err, tweets, resp){
+    return arrTweets
 
-        if(err) {
-          console.log("ERROR in tweets function");
-          reject(err);
-        }
-        else {
-          resolve(tweets)
-        }
-
-      });
-    })
 
 
   }
+// async function to get tweets
+  getTweets (twitterHandle) {
+
+    return new Promise(function (resolve, reject) {
+      $.ajax({
+        type: 'GET',
+        data: {twitterHandle:twitterHandle},
+        url: 'api/tweets', // don't need a full url just the endpoint if you're hitting your own server
+        async: true,
+        headers: {}, // a header object in case you need to send parameters
+        success: resolve, // a function called when the request has finished
+        error: reject // a function called if it fails
+      })
+    })
+
+  }
+
 
 
 

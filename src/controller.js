@@ -15,13 +15,15 @@ export default class Controller {
   }
 
   flipTweets (userhandle) {
-    var tweets = this.model.getTweets(userhandle)
-     .then(function(thing){
-        console.log(thing, "this is the thing")
+    this.model.getTweets(userhandle)
+      .then((tweets)=> {
+        let flippedTweets = this.model.flipTweets(tweets)
 
-     })
-
-    this.view.renderTweets(tweets)
+        this.view.renderTweets(flippedTweets)
+      })
+      .catch(function(err){
+        console.log(err, "ERROR");
+      })
 
   }
 

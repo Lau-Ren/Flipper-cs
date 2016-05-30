@@ -104,11 +104,8 @@ body > div > div:nth-child(2) > div > form > input[type="submit"]:nth-child(2){
 
 #twitter-flipper > div > img{
  border-radius: 100px;
-}
-
 
 }
-
 
 
 
@@ -121,6 +118,18 @@ footer {
 	padding: 10px;
 }
 
+#text-box{
+  justify-content:center ;
+  align-items: center;
+
+
+}
+#twitter-box{
+  justify-content:center ;
+  align-items: center;
+
+
+}
 #text-box  .flip-img {
   max-width: 50px;
 
@@ -132,6 +141,9 @@ footer {
   max-width: 250px;
   display: inline-flex;
 
+  justify-content:center ;
+  align-items: center;
+
 
 }
 
@@ -142,6 +154,8 @@ footer {
   max-width: 250px;
   display: inline-flex;
 
+  justify-content:center ;
+  align-items: center;
 
 
 }
@@ -166,6 +180,12 @@ footer {
   .flipped {
     margin:10px;
 
+  }
+  #twitter-box{
+
+    max-width: 717px;
+    justify-content:center ;
+    align-items: center;
   }
 
 

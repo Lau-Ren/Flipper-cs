@@ -11,6 +11,7 @@ export default class Model {
       if(words.hasOwnProperty(item)){
             return words[item]
       } else {
+        
         return item
       }
     })
@@ -52,3 +53,4 @@ export default class Model {
 
 
 }
+

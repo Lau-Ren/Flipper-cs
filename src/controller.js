@@ -10,8 +10,8 @@ export default class Controller {
 
   flipText (text) {
     var origArr = text.split(" ")
-    var newStr = this.model.flipper(origArr) //flipper takes an array but returns a string
-    this.view.renderFlippedText(newStr)
+    var flippedText = this.model.flipper(origArr) //flipper takes an array but returns a string
+    this.view.renderFlippedText(flippedText, text)
   }
 
   flipTweets (userhandle) {

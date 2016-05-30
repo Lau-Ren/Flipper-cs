@@ -121,10 +121,54 @@ footer {
 	padding: 10px;
 }
 
+#text-box  .flip-img {
+  max-width: 50px;
+
+}
+.original {
+  border: solid;
+  min-height: 200px;
+  min-width: 200px;
+  max-width: 250px;
+  display: inline-flex;
+
+
+}
+
+.flipped {
+  border: dashed;
+  min-height: 200px;
+  min-width: 200px;
+  max-width: 250px;
+  display: inline-flex;
+
+
+
+}
+
+.flipped {
+
+}
+
+
 /* Larger than mobile */
 
 
 @media (min-width: 400px) {
+
+  .flip-img {
+    display: none;
+  }
+
+  .original {
+    margin:10px;
+  }
+  .flipped {
+    margin:10px;
+
+  }
+
+
 	.triangle-logo {
 		max-width: 200px;
 

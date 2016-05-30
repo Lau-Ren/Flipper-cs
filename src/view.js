@@ -5,8 +5,27 @@ export default class View {
     console.log('The data from the model is: ' + model.data)
   }
 
-  renderFlippedText (flippedText) {
-    $('#flipped-box').append(flippedText)
+  renderFlippedText (flippedText, origText) {
+
+    var originalText = $("<p/>", {
+              "text": origText,
+              "class": "original"
+            })
+
+    var flipImg = $("<img/>", {
+                "src":'./images/triangleWhite.png' ,
+                "class": "flip-img"
+              })
+
+    var flippedText = $("<p/>", {
+              "text": flippedText,
+              "class": "flipped"
+            })
+
+
+    $('#text-box').append(originalText)
+    $('#text-box').append(flipImg)
+    $('#text-box').append(flippedText)
   }
 
   renderTweets (arrTweets) {
@@ -21,16 +40,16 @@ export default class View {
     arrTweets.forEach(function(tweet){
       var origTweet = $("<p/>", {
                 "text": tweet.text,
-                "class": "original-tweet"
+                "class": "original"
               })
 
       var flippedTweet = $("<p/>", {
                 "text": tweet.flipped_text,
-                "class": "flipped-tweet"
+                "class": "flipped"
               })
 
-      $('.twitter-box').append(origTweet)
-      $('.twitter-box').append(flippedTweet)
+      $('#twitter-box').append(origTweet)
+      $('#twitter-box').append(flippedTweet)
 
     })
   }

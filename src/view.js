@@ -6,6 +6,7 @@ export default class View {
   }
 
   renderFlippedText (flippedText, origText) {
+    $('#text-box').empty()
 
     var originalText = $("<p/>", {
               "text": origText,
@@ -29,17 +30,18 @@ export default class View {
   }
 
   renderTweets (arrTweets) {
+    $('#twitter-box').empty()
 
     var profileImg = $("<img/>", {
                 "src": arrTweets[0].user.profile_image_url,
                 "class": "profile-img"
               })
 
-    $('.twitter-box').append(profileImg)
+    $('#twitter-box').append(profileImg)
 
     arrTweets.forEach(function(tweet){
       var origTweet = $("<p/>", {
-                "text": tweet.text,
+                "text": tweet.text+"\n"+tweet.created_at,
                 "class": "original"
               })
 

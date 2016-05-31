@@ -8,6 +8,7 @@ export default class Model {
     var origArray = arr
 
     var flippedArr = origArray.map(function(item){
+       item = item.toLowerCase()
       if(words.hasOwnProperty(item)){
             return words[item]
       } else {

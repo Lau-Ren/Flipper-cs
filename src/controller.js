@@ -26,6 +26,9 @@ export default class Controller {
       })
 
   }
+  retweet (text, handle) {
+    this.model.retweet
+  }
 
 
 }

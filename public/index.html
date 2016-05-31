@@ -55,7 +55,11 @@
           <input type="submit" value="flip"></input>
         </form>
 
-        <div id="text-box"></div>
+        <div id="text-box">
+          <p class="original">Original text displayed here</p>
+          <p class="flipped">The flipped text is displayed here</p>
+
+        </div>
 
 
       </div>
@@ -68,8 +72,21 @@
           <input type="submit" value="get"></input>
         </form>
 
+        <div class="profile-image">
 
-        <div id="twitter-box"></div>
+
+        </div>
+        <div class="row">
+
+        <div id="twitter-box">
+           <p class="original">Original tweets are displayed here</p>
+          <p class="flipped">The flipped tweets are displayed here</p>
+          
+          <form class="retweet-form" action="/retweet" method="post"><input class="retweet-button" type="submit" value="Retweet"></input></form>
+
+        </div>
+
+        </div>
 
 
       </div>

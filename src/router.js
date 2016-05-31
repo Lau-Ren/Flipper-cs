@@ -22,6 +22,15 @@ export default class Router {
         this.controller.flipTweets($('#twitter-handle').val())
       })
 
+      $('.retweet-form').on('submit', (event) => {
+        event.preventDefault()
+        
+        var handle = $('#twitter-handle').val()
+        var text = event.target.previousElementSibling.innerHTML
+
+        this.controller.retweet(text, handle)
+      })
+
 
 
 

@@ -24,6 +24,7 @@ router.use(bodyParser.urlencoded({ extended: true })); // for parsing applicatio
 // routes go below:
 
 const getTweets = require('./lib/get-tweets.js')
+const retweet = require('./lib/retweet.js')
 
 //get homepage
 router.get('/', function(req, res, next) {
@@ -40,5 +41,18 @@ router.get('/api/tweets', function(req, res, next) {
       return res.json(tweets)
     })
 })
+
+//retweet a flipped tweet or text string
+router.post('/retweet', function(req, res, next) {
+console.log(req, "this is req in server js");
+  // let twitterHandle = req.query.twitterHandle
+var status = req.body
+var handle = req.body
+  retweet(status, userhandle)
+    .then(function(tweets){
+      return res.json(tweets)
+    })
+})
+
 
 app.use('/', router)

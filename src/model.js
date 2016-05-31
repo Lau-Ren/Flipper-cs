@@ -11,7 +11,7 @@ export default class Model {
       if(words.hasOwnProperty(item)){
             return words[item]
       } else {
-        
+
         return item
       }
     })
@@ -47,6 +47,23 @@ export default class Model {
     })
 
   }
+
+  retweet (text, handle) {
+
+    return new Promise(function (resolve, reject) {
+      $.ajax({
+        type: 'POST',
+        data: {text:text, handle:handle},
+        url: '/retweet', // don't need a full url just the endpoint if you're hitting your own server
+        async: true,
+        headers: {}, // a header object in case you need to send parameters
+        success: resolve, // a function called when the request has finished
+        error: reject // a function called if it fails
+      })
+    })
+
+  }
+
 
 
 

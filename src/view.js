@@ -25,23 +25,34 @@ export default class View {
 
 
     $('#text-box').append(originalText)
-    $('#text-box').append(flipImg)
     $('#text-box').append(flippedText)
+  }
+  renderRetweet (thing) {
+    console.log("in the view render place")
+    $('.flipped').append("done!")
   }
 
   renderTweets (arrTweets) {
     $('#twitter-box').empty()
+    $('.profile-image').empty()
 
     var profileImg = $("<img/>", {
                 "src": arrTweets[0].user.profile_image_url,
                 "class": "profile-img"
               })
+    var who = $("<p/>", {
+                "text": arrTweets[0].user.name +"'s most recent tweets",
+                "class": "profile-img"
+              })
 
-    $('#twitter-box').append(profileImg)
+
+    $('.profile-image').append(profileImg)
+    $('.profile-image').append(who)
 
     arrTweets.forEach(function(tweet){
+
       var origTweet = $("<p/>", {
-                "text": tweet.text+"\n"+tweet.created_at,
+                "text": tweet.text,
                 "class": "original"
               })
 
@@ -54,5 +65,11 @@ export default class View {
       $('#twitter-box').append(flippedTweet)
 
     })
+
+    var retweetButton = '<form class="retweet-form" action="https://twitter.com/intent/tweet?text=""   " method="post"><input class="retweet-button" type="submit" value="Retweet"></input></form>'
+
+
+    $('.flipped').after(retweetButton)
+
   }
 }

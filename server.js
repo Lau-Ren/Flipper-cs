@@ -44,12 +44,12 @@ router.get('/api/tweets', function(req, res, next) {
 
 //retweet a flipped tweet or text string
 router.post('/retweet', function(req, res, next) {
-console.log(req, "this is req in server js");
   // let twitterHandle = req.query.twitterHandle
 var status = req.body
-var handle = req.body
+var userhandle = req.body
   retweet(status, userhandle)
     .then(function(tweets){
+      console.log(res, "this is the response ***")
       return res.json(tweets)
     })
 })

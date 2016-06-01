@@ -19,7 +19,7 @@ export default class Controller {
       .then((tweets)=> {
         let flippedTweets = this.model.flipTweets(tweets)
 
-        this.view.renderTweets(flippedTweets)
+        this.view.renderTweets(flippedTweets,userhandle)
       })
       .catch(function(err){
         console.log(err, "ERROR");
@@ -27,7 +27,8 @@ export default class Controller {
 
   }
   retweet (text, handle) {
-    this.model.retweet
+    this.view
+
   }
 
 

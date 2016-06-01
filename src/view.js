@@ -32,7 +32,8 @@ export default class View {
     $('.flipped').append("done!")
   }
 
-  renderTweets (arrTweets) {
+  renderTweets (arrTweets, userhandle) {
+
     $('#twitter-box').empty()
     $('.profile-image').empty()
 
@@ -44,7 +45,6 @@ export default class View {
                 "text": arrTweets[0].user.name +"'s most recent tweets",
                 "class": "profile-img"
               })
-
 
     $('.profile-image').append(profileImg)
     $('.profile-image').append(who)
@@ -64,12 +64,27 @@ export default class View {
       $('#twitter-box').append(origTweet)
       $('#twitter-box').append(flippedTweet)
 
-    })
+      var urlHandle =  encodeURIComponent("#FLIPPER @" + userhandle + ": ")
+      var  urlTweet = encodeURIComponent(tweet.flipped_text)
 
-    var retweetButton = '<form class="retweet-form" action="https://twitter.com/intent/tweet?text=""   " method="post"><input class="retweet-button" type="submit" value="Retweet"></input></form>'
+      var retweetButton = $("<a/>", {
+                  "href": 'https://twitter.com/intent/tweet?text="' + urlHandle + urlTweet + '"',
+                  "class": "retweet-link button",
+                  "target": "_blank",
+                  "text": "Tweet"
+                })
+
+      $('#twitter-box').append(retweetButton)
+
+     })
 
 
-    $('.flipped').after(retweetButton)
+
+
+
+     // <a class="retweet-link" href='https://twitter.com/intent/tweet?text=""' target="_blank">Retweet</a>
+    // var retweetButton = '<form class="retweet-form" action="/retweet" method="post"><input class="retweet-button" type="submit" value="Retweet"></input></form>'
+
 
   }
 }

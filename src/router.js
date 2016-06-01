@@ -22,9 +22,10 @@ export default class Router {
         this.controller.flipTweets($('#twitter-handle').val())
       })
 
-      $('.retweet-form').on('submit', (event) => {
+      $('.retweet-link').on('click', (event) => {
         event.preventDefault()
-        
+        cosole.log("in the router retweetlink place")
+
         var handle = $('#twitter-handle').val()
         var text = event.target.previousElementSibling.innerHTML
 

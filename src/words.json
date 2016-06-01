@@ -161,11 +161,11 @@
   "husbands":"wives",
   "heroine":"hero",
   "heroines":"heroes",
-  "her":"him",
+  "her":"him/his",
   "him":"her",
 
   "hers":"his",
-  "his":"hers",
+  "his":"her(s)",
 
   "journeyman":"journeywoman",
   "journeymen":"journeywomen",

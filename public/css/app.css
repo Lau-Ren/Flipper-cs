@@ -1,3 +1,21 @@
+/*
+really nice stylesheet, but I would try to organise it slightly better
+maybe make a quick reference index at the top, to make it explicit how the styles apply
+to the layout of the page
+*/
+
+/*
+  ** Example Contents
+
+  - page wide styles
+  - name bar
+  - heading specific
+  - flip box specific
+  - desktop specfic
+
+*/
+
+
 body {
   padding: 25px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,26 +24,26 @@ body {
   text-align: center;
   font-family: 'BEBAS';
 }
-#flip-text > input[type="submit"]:nth-child(2){
-
-  color: rgb(250, 250, 250);
-}
 
 h1 {
-
   font-size: 80px;
 }
-#get-user > input[type="submit"]:nth-child(2){
 
+#flip-text > input[type="submit"]:nth-child(2),
+#get-user > input[type="submit"]:nth-child(2),
+a {
   color: rgb(250, 250, 250);
-
 }
 
+/*
+try and have DRY css, so list elements that have excatly the same properties.
+Alternatively, everything you want to have this as the color, you could give as '.base-color'
+class
 
-a{
-	color: rgb(250, 250, 250);
+you could also use sass in here, so you can set this colour as a variable to
+dry up this code further*/
 
-}
+
 .section-heading{
   color: rgb(250, 250, 250);
   border-top: 1px solid #eee;
@@ -54,15 +72,13 @@ a{
   align-items: center;
   display: flex;
   margin-bottom: 100px;
-
-
 	width: 100%;
 	height: 6.5rem;
 	z-index: 99;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
-
 }
+
 .navbar-list{
   justify-content: center;
   align-items: center;
@@ -140,23 +156,20 @@ footer {
   align-items: center;
   margin: 0 auto;
   flex-wrap: wrap;
-
-
-
 }
+
 #twitter-box{
   display: flex;
   justify-content:center;
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-
-
 }
+
 #text-box  .flip-img {
   max-width: 50px;
-
 }
+
 .original {
   border: solid;
   height: 250px;

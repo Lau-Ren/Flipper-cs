@@ -44,15 +44,16 @@ router.get('/api/tweets', function(req, res, next) {
 
 //retweet a flipped tweet or text string
 router.post('/retweet', function(req, res, next) {
-  // let twitterHandle = req.query.twitterHandle
-var status = req.body
-var userhandle = req.body
+  var status = req.body
+  var userhandle = req.body
   retweet(status, userhandle)
     .then(function(tweets){
-      console.log(res, "this is the response ***")
       return res.json(tweets)
     })
 })
 
 
 app.use('/', router)
+
+// You're using a mixture of ES6 and ES5 in this file,
+// lets stick to one of the other

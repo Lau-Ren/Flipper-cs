@@ -4,7 +4,7 @@ import Controller from './controller'
 export default class Router {
 
   constructor () {
-    this.controller = new Controller()
+    this.controller = new Controller() // niiiice
   }
 
   listen () {
@@ -28,13 +28,10 @@ export default class Router {
 
         var handle = $('#twitter-handle').val()
         var text = event.target.previousElementSibling.innerHTML
+        //maybe use jquery version of previousElementSibline - .prev()
 
         this.controller.retweet(text, handle)
       })
-
-
-
-
     })
   }
 }

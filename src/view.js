@@ -23,17 +23,16 @@ export default class View {
               "class": "flipped"
             })
 
-
     $('#text-box').append(originalText)
     $('#text-box').append(flippedText)
   }
+
   renderRetweet (thing) {
     console.log("in the view render place")
     $('.flipped').append("done!")
   }
 
-  renderTweets (arrTweets, userhandle) {
-
+  renderTweets (arrTweets, userhandle) { // this function is too long, try and seperate it out!
     $('#twitter-box').empty()
     $('.profile-image').empty()
 
@@ -76,15 +75,6 @@ export default class View {
 
       $('#twitter-box').append(retweetButton)
 
-     })
-
-
-
-
-
-     // <a class="retweet-link" href='https://twitter.com/intent/tweet?text=""' target="_blank">Retweet</a>
-    // var retweetButton = '<form class="retweet-form" action="/retweet" method="post"><input class="retweet-button" type="submit" value="Retweet"></input></form>'
-
-
+    })
   }
 }

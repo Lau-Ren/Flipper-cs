@@ -6,7 +6,8 @@
   "scripts": {
     "build-js": "watchify  src/index.js -o public/js/app.js -v",
     "watch": "npm run build-js",
-    "start": "nodemon server.js"
+    "start:dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

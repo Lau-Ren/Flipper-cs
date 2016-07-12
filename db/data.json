@@ -1,0 +1,84 @@
+{"wordType":[
+  {"name":"CD", "replace":""},
+  {"name":"DT", "replace":""},
+  {"name":"EX", "replace":""},
+  {"name":"FW", "replace":""},
+  {"name":"IN", "replace":""},
+  {"name":"JJ", "replace":""},
+  {"name":"JJR", "replace":""},
+  {"name":"JJS", "replace":""},
+  {"name":"LS", "replace":""},
+  {"name":"MD", "replace":""},
+  {"name":"NN", "replace":""},
+  {"name":"NNP", "replace":""},
+  {"name":"NNPS", "replace":""},
+  {"name":"NS", "replace":""},
+  {"name":"POS", "replace":""},
+  {"name":"PDT", "replace":""},
+  {"name":"RB", "replace":""},
+  {"name":"RBR", "replace":""},
+  {"name":"RBS", "replace":""},
+  {"name":"RP", "replace":""},
+  {"name":"SYM", "replace":""},
+  {"name":"TO", "replace":""},
+  {"name":"UH", "replace":""},
+  {"name":"VB", "replace":""},
+  {"name":"VBD", "replace":""},
+  {"name":"VBG", "replace":""},
+  {"name":"VBN", "replace":""},
+  {"name":"VBP", "replace":""},
+  {"name":"BZ", "replace":""},
+  {"name":"WDT", "replace":""},
+  {"name":"WP", "replace":""},
+  {"name":"WP$", "replace":""},
+  {"name":"WRB", "replace":""},
+  {"name":",", "replace":""},
+  {"name":".", "replace":""},
+  {"name":":", "replace":""},
+  {"name":"$", "replace":""},
+  {"name":"#", "replace":""},
+  {"name":"(" , "replace":""},
+  {"name":")", "replace":""}
+  
+  ]
+}
+
+
+
+//  {
+//     "first":{
+//       "subjective": "I",
+//       "objective": "me",
+//       "possessive": "my",
+//       "reflexive": "myself"
+//    },
+//     "second": {
+//       "subjective": "you",
+//       "objective": "you",
+//       "possessive": "your",
+//       "reflexive": "yourself"
+//     },
+//     "third": {
+//       "neutral": {
+//         "subjective": "they",
+//         "objective" : "them",
+//         "possessive": "their",
+//         "reflexive" : "themself"
+//       },
+//       "female": {
+//         "subjective": "she",
+//         "objective" : "her",
+//         "possessive": "her",
+//         "reflexive" : "herself"
+//       }, 
+//       "male": {
+//         "subjective": "he",
+//         "objective" : "him",
+//         "possessive": "his",
+//         "reflexive" : "himself"        
+//       }
+//     }
+
+
+
+// }
